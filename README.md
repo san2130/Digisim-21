@@ -44,10 +44,12 @@ You can see the working video of our circuit [here](https://drive.google.com/fil
 We have used the data give in [problem statement](https://github.com/ujjawalece/Implementation-of-Linked-List-and-Binary-Tree-using-Digital-Circuit/blob/main/Digisim'21_PS1.pdf).
 
 
-## Digital circuit for Binary Tree-
-### Problem Statement-
-We have to implement a **Binary Tree** data structure using the digital circuit components like mux, gates, registers e.t.c.
-Please, read the complete problem statement [here](https://github.com/ujjawalece/Implementation-of-Linked-List-and-Binary-Tree-using-Digital-Circuit/blob/main/Digisim'21_PS2.pdf) to understand what exactly we have to do.
+## Digital Circuit for Binary Tree-
+### Problem Statement
+- The basic problem statement is traversing a binary tree and finding the maximum value smaller than an input number X.  
+- The linked list is fed in the form of a binary file through a ROM starting from address 0, where address A holds the node value and address A+1 stores the address of the next node.  
+- The entire circuit has to be made using the 7400 IC series which includes IC's like Multiplexers, Registers, Counters, Flip Flops, combinational gates etc. ([Entire Problem Statement](https://github.com/san2130/Digisim21/blob/main/Digisim'21_PS2.pdf))
+
 ### Approach-
 We will simulate our circuit on EDA tool **Proteus**.
 

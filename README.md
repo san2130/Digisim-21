@@ -1,25 +1,31 @@
 # Traversing-Linked-List-and-Binary-Tree-using-Digital-Circuit
-## Digital circuit for Linked List-
-### Problem Statement-
-We have to implement a **linked list** data structure using the digital circuit components like mux, gates, registers e.t.c.
-And finally, we have to display the maximum number present in the linked list which is smaller than a given number.
-Please, read the complete problem statement [here](https://github.com/ujjawalece/Implementation-of-Linked-List-and-Binary-Tree-using-Digital-Circuit/blob/main/Digisim'21_PS1.pdf) for better undersatnding.
-### Approach-
-We will simulate our circuit on EDA tool **Proteus**.
+## Digital Circuit for Linked List
+### Problem Statement
+- The basic problem statement is traversing a linked list and finding the maximum value smaller than an input number X.  
+- The linked list is fed in the form of a binary file through a ROM starting from address 0, where address A holds the node value and address A+1 stores the address of the next node.  
+- The entire circuit has to be made using the 7400 IC series which includes IC's like Multiplexers, Registers, Counters, Flip Flops, combinational gates etc. ([Entire Problem Statement](https://github.com/san2130/Digisim21/blob/main/Digisim'21_PS1.pdf))
 
-We have a ROM which act as a memory device for this circuit. Its store all the values of linked list corresponding to there addresses. You can change the data of Rom by using [this](https://github.com/ujjawalece/Implementation-of-Linked-List-and-Binary-Tree-using-Digital-Circuit/blob/main/python%20image%20file.py) python file. It will create [binary_file_PS1_t1.bin](https://github.com/ujjawalece/Implementation-of-Linked-List-and-Binary-Tree-using-Digital-Circuit/blob/main/binary_file_PS1_t1.bin) and you have to just load this file on our ROM.
+### Approach
+The circuit was designed on **Proteus** EDA software.
 
-Now, we connected two Flip-Flops to the output of our ROM one FF is negative edge triggered and the other one is positive edge triggered.
-So, when the negative clock cycle comes the data (bank money) got stored in the first ff.
+- On a high level, the basic approach is to iterate over the entire linked list and check if the current node value is smaller than the input X and then update the maximum such value.  
+- The linked list will be read through the ROM which takes an address as input and returns the data stored at that address.  
+- Since the hardware cost for the ROM is high only one ROM was used to read both the node value and the address of the next node.  
+- Thus there will be two types of data as the ROM output, the node value which will be then proccessed using combinational logic and the address of the next node which will be fed back to the ROM and the cycle goes on until the ROM output is 255(end of list)  
 
-**TRAVERSING THROUGH LINKED LIST-**
-We used an adder to increase the current address by 1 and then give that address to the
+The data of the ROM can be changed by using this [python file](https://github.com/san2130/Digisim21/blob/main/create_bin_file.py). 
+Running this script will generate [PS1.bin](https://github.com/san2130/Digisim21/blob/main/PS1.bin) which can be loaded into the ROM.  
+<br>
+<br>
+
+**TRAVERSING THROUGH LINKED LIST**  
+An adder was used to increase the current address by 1 and then give that address to the
 ROM with the help of a MUX which has two input lines one is of current address and other
 one is of current address + 1. So now we can get the next node address and this address is
 saved into the positive edge FF, whose output is used as current address for next cycle. So,
 in this way we are traversing through the linked list.
 
-**CALCULATION-**
+**CALCULATION**
 Now, we just have to calculate the maximum bank amount which Harshad Mehta can repay.
 
 It’s simple; remember we stored the bank money data in the negative edge FF. So, we just

@@ -16,32 +16,30 @@ The circuit was designed on **Proteus** EDA software.
 The data of the ROM can be changed by using this [python file](https://github.com/san2130/Digisim21/blob/main/create_bin_file.py). 
 Running this script will generate [PS1.bin](https://github.com/san2130/Digisim21/blob/main/PS1.bin) which can be loaded into the ROM.  
 <br>
-<br>
 
 **TRAVERSING THROUGH LINKED LIST**  
-An adder was used to increase the current address by 1 and then give that address to the
-ROM with the help of a MUX which has two input lines one is of current address and other
-one is of current address + 1. So now we can get the next node address and this address is
-saved into the positive edge FF, whose output is used as current address for next cycle. So,
-in this way we are traversing through the linked list.
+- An adder was used to increase the current address by 1 and then give that address to the
+ROM with the help of a MUX. 
+- The MUX has two input lines - current address and current address + 1, and a select line which is the current mode. 
+- Mode 0 maps to the ROM output being the current node value while Mode 1 corresponds to the ROM output being the address of the next node.  
+- This mode toggles on every cycle, therefore the time taken to move to the next node is 2 clock cycles.
+<br>
 
-**CALCULATION**
+**CALCULATION**  
+<br>
 Now, we just have to calculate the maximum bank amount which Harshad Mehta can repay.
+- When the mode is 0 it means the ROM output is a node value so this value is then sent to the combinational logic. 
+- The node value is compared with the current holdings of Harshad (X) using a comparator, if this value is less than or equal to X then it is further compared with the maximum such node value encountered so far stored in a register and accordingly this register is updated. 
+ 
 
-It’s simple; remember we stored the bank money data in the negative edge FF. So, we just
-compare that data to the current holding (CH) of Harshad Mehta using a comparator if it’s
-less than CH we store it using a ff otherwise do nothing. And at last when we reach at end
-of linked list (when next node address = 255) we subtract it from CH to get the amount left.
-
-To find the address we travel through ROM data using a simple counter and comparing the
-output of ROM with the amount which Harshad Mehta can repay, if its equal we show the
-counter value which is the ADDRESS of the bank.
-
-Now, we have our required result in binary form, we just have to show it on 7 segment display. Before that we have to convrt it into BCD.
+Now, we have our required result in binary form, we just have to show it on 7 segment display. Before that we have to convert it into BCD.
 For 7 segment display we will use **Shift Add 3 method**. You can read about it [here](https://github.com/ujjawalece/Implementation-of-Linked-List-and-Binary-Tree-using-Digital-Circuit/blob/main/Binary2BCD.pdf).
-### Solution-
+<br>
+
+### Solution  
 You can find complete proteus file [here](https://github.com/ujjawalece/Implementation-of-Linked-List-and-Binary-Tree-using-Digital-Circuit/blob/main/ps1.DSN).
-### Working-
+<br>
+### Working  
 You can see the working video of our circuit [here](https://drive.google.com/file/d/1smdCNSce_toEbJcSIwCuEU5kZWQFbrIi/view?usp=sharing).
 We have used the data give in [problem statement](https://github.com/ujjawalece/Implementation-of-Linked-List-and-Binary-Tree-using-Digital-Circuit/blob/main/Digisim'21_PS1.pdf).
 

@@ -1,4 +1,4 @@
-# Traversing-Linked-List-and-Binary-Tree-using-Digital-Circuit
+# Traversing Linked-List and Binary Tree using Digital Circuit
 ## Digital Circuit for Linked List
 ### Problem Statement
 - The basic problem statement is traversing a linked list and finding the maximum value smaller than an input number X.  

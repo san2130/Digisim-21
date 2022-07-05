@@ -37,8 +37,11 @@ For 7 segment display we will use **Shift Add 3 method**. You can read about it 
 <br>
 
 ### Solution  
-You can find complete proteus file [here](https://github.com/ujjawalece/Implementation-of-Linked-List-and-Binary-Tree-using-Digital-Circuit/blob/main/ps1.DSN).
 <br>
+<p align="center"> <a href=https://github.com/san2130/Digisim21/blob/main/digism21ps1clean.DSN>Proteus Design file</a> <br><br>
+<img src="https://github.com/san2130/Digisim21/blob/main/LinkedList.png" width="80%"/></p>
+<br>
+
 ### Working  
 You can see the working video of our circuit [here](https://drive.google.com/file/d/1smdCNSce_toEbJcSIwCuEU5kZWQFbrIi/view?usp=sharing).
 We have used the data give in [problem statement](https://github.com/ujjawalece/Implementation-of-Linked-List-and-Binary-Tree-using-Digital-Circuit/blob/main/Digisim'21_PS1.pdf).

@@ -43,7 +43,7 @@ For 7 segment display we will use **Shift Add 3 method**. You can read about it 
 <br>
 
 ### Working  
-You can see the working video of our circuit [here](https://github.com/san2130/Digisim21/blob/main/Recording1.mp4).
+You can see the working video of our circuit [here](https://drive.google.com/file/d/19G4LibBoyWzlmvntwxMMYAmuyDMrrppg/view?usp=sharing).
 The binary file used here is [PS1.bin](https://github.com/san2130/Digisim21/blob/main/PS1.bin) and the clock frequency is 5 Hz.
 
 
@@ -92,5 +92,5 @@ For 7 segment display we will use **Shift Add 3 method**. You can read about it 
 ### Solution-
 You can find complete proteus file [here](https://github.com/ujjawalece/Implementation-of-Linked-List-and-Binary-Tree-using-Digital-Circuit/blob/main/ps2.DSN).
 ### Working-
-You can see the working video of our circuit [here](https://drive.google.com/file/d/1-Hjrgi0n4gRep6W1q02odHNMzv3j3KjB/view?usp=sharing).
+You can see the working video of our circuit [here](https://drive.google.com/file/d/1_hUymDWVhLnb5ABah0CEXrlf9oJ-LaMT/view?usp=sharing).
 We have used the data give in [problem statement](https://github.com/ujjawalece/Implementation-of-Linked-List-and-Binary-Tree-using-Digital-Circuit/blob/main/Digisim'21_PS2.pdf).

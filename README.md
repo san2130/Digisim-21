@@ -90,7 +90,7 @@ which will become our final address after all nodes are processed.
 Now, we have our required result, we just have to show it on 7 segment display.
 For 7 segment display we will use **Shift Add 3 method**. You can read about it [here](https://github.com/ujjawalece/Implementation-of-Linked-List-and-Binary-Tree-using-Digital-Circuit/blob/main/Binary2BCD.pdf).
 ### Solution-
-You can find complete proteus file [here](https://github.com/ujjawalece/Implementation-of-Linked-List-and-Binary-Tree-using-Digital-Circuit/blob/main/ps2.DSN).
+You can find complete proteus file [here](https://github.com/san2130/Digisim21/blob/main/Round221clean.DSN).
 ### Working-
 You can see the working video of our circuit [here](https://drive.google.com/file/d/1_hUymDWVhLnb5ABah0CEXrlf9oJ-LaMT/view?usp=sharing).
-We have used the data give in [problem statement](https://github.com/ujjawalece/Implementation-of-Linked-List-and-Binary-Tree-using-Digital-Circuit/blob/main/Digisim'21_PS2.pdf).
+The binary file used here is [PS2.bin](https://github.com/san2130/Digisim21/blob/main/PS2.bin).

@@ -1,4 +1,4 @@
-# Traversing Linked-List and Binary Tree using Digital Circuit
+# Traversing Linked-List and Binary-Tree using Digital Circuit
 ## Digital Circuit for Linked List
 ### Problem Statement
 - The basic problem statement is traversing a linked list and finding the maximum value smaller than an input number X.  
@@ -43,8 +43,8 @@ For 7 segment display we will use **Shift Add 3 method**. You can read about it 
 <br>
 
 ### Working  
-You can see the working video of our circuit [here](https://drive.google.com/file/d/1smdCNSce_toEbJcSIwCuEU5kZWQFbrIi/view?usp=sharing).
-We have used the data give in [problem statement](https://github.com/ujjawalece/Implementation-of-Linked-List-and-Binary-Tree-using-Digital-Circuit/blob/main/Digisim'21_PS1.pdf).
+You can see the working video of our circuit [here](https://github.com/san2130/Digisim21/blob/main/Recording1.mp4).
+The binary file used here is [PS1.bin](https://github.com/san2130/Digisim21/blob/main/PS1.bin) and the clock frequency is 5 Hz.
 
 
 ## Digital Circuit for Binary Tree-

@@ -67,7 +67,7 @@ The binary file used here is [PS1.bin](https://github.com/san2130/Digisim21/blob
 ### Approach
 The circuit was designed on **Proteus** EDA software.
 
-- On a high level, the basic approach is to traverse over the entire lbinary tree and check if the value of expense for the current node is lesser than the minimum expense encountered so far and update it accordingly. 
+- On a high level, the basic approach is to traverse over the entire binary tree and check if the value of expense for the current node is lesser than the minimum expense encountered so far and update it accordingly. 
 - The binary tree will be read through the ROM which takes an address as input and returns the data stored at that address.  
 - Since the hardware cost for the ROM is high only one ROM was used to read both the node value and the address of the children. 
 - Thus there will be three types of data as the ROM output, the node value which will be then proccessed using combinational logic and the address of both the children.  

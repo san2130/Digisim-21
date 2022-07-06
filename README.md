@@ -74,11 +74,11 @@ The circuit was designed on **Proteus** EDA software.
 <br>  
 
 **Traversing through Binary-Tree**
-- Post-Order Traversal has been implemented using a custom built stack of sixteen 8-bit registers which is the maximum tree size. 
+- **Post-Order Traversal** has been implemented using a custom built **stack of sixteen 8-bit registers** which is the maximum tree size. 
 - For every node visited first the right and left children addresses in order, are pushed into the stack if not 255(NULL) and then the current node address is pushed in. 
 - If a leaf node is reached then the stack is popped and the address at the top is fed into the ROM, the corresponding node data is then processed using combinational logic. 
-- For the depth calculation an additonal stack of sixteen 4-bit registers are used, which pushes in the depth of the current node while going down the tree using a counter. 
-- For mulitplying two 8-bit numbers tpc * depth a custom binary mulitplier has been implemented too.
+- For the **depth calculation** an additonal **stack of sixteen 4-bit registers** are used, which pushes in the depth of the current node while going down the tree using a counter. 
+- For mulitplying two 8-bit numbers tpc * depth a custom **binary mulitplier** has been implemented too.
 <br>
 
 To display the final answer on a seven segment display the same circuit is used as in the linked-list part to convert 8-bit binary to 12-bit BCD.  

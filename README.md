@@ -32,8 +32,8 @@ Now, we just have to calculate the maximum bank amount which Harshad Mehta can r
 - The node value is compared with the current holdings of Harshad (X) using a comparator, if this value is less than or equal to X then it is further compared with the maximum such node value encountered so far stored in a register and accordingly this register is updated. 
  
 
-Now, we have our required result in binary form, we just have to show it on 7 segment display. Before that we have to convert it into BCD.
-For 7 segment display we will use **Shift Add 3 method**. You can read about it [here](https://github.com/ujjawalece/Implementation-of-Linked-List-and-Binary-Tree-using-Digital-Circuit/blob/main/Binary2BCD.pdf).
+Once we have the final answer, we will convert it to 12-bit BCD and display the answer on a seven segment display. 
+For 7 segment display we have used **Shift Add 3/Double Dabble Algorithm**. You can read about it [here](/).
 <br>
 
 ### Solution  
@@ -49,46 +49,26 @@ The binary file used here is [PS1.bin](https://github.com/san2130/Digisim21/blob
 
 ## Digital Circuit for Binary Tree-
 ### Problem Statement
-- The basic problem statement is traversing a binary tree and finding the maximum value smaller than an input number X.  
-- The linked list is fed in the form of a binary file through a ROM starting from address 0, where address A holds the node value and address A+1 stores the address of the next node.  
+- The basic problem statement is traversing a binary tree and finding the minimum value of Y = (node_value) + X*(depth of node) where X is an 8-bit input.
+- The binary tree is fed in the form of a binary file through a ROM starting from address 0, where address A holds the node value, address A+1 stores the left child while address A+2 stores the right child.
 - The entire circuit has to be made using the 7400 IC series which includes IC's like Multiplexers, Registers, Counters, Flip Flops, combinational gates etc. ([Entire Problem Statement](https://github.com/san2130/Digisim21/blob/main/Digisim'21_PS2.pdf))
 
 ### Approach-
-We will simulate our circuit on EDA tool **Proteus**.
+The circuit was designed on **Proteus** EDA software.
 
-We have a ROM which act as a memory device for this circuit. Its store all the values of linked list corresponding to there addresses. You can change the data of Rom by using [this](https://github.com/ujjawalece/Implementation-of-Linked-List-and-Binary-Tree-using-Digital-Circuit/blob/main/python%20image%20file.py) python file. It will create [binary_file_PS2_t1.bin](https://github.com/ujjawalece/Implementation-of-Linked-List-and-Binary-Tree-using-Digital-Circuit/blob/main/binary_file_PS2_t1.bin) and you have to just load this file on our ROM.
+- On a high level, the basic approach is to traverse over the entire lbinary tree and check if the value of expense for the current node is lesser than the minimum expense encountered so far and update it accordingly. 
+- The binary tree will be read through the ROM which takes an address as input and returns the data stored at that address.  
+- Since the hardware cost for the ROM is high only one ROM was used to read both the node value and the address of the children. 
+- Thus there will be three types of data as the ROM output, the node value which will be then proccessed using combinational logic and the address of both the children.  
 
-The input of our ROM is connected to the output of an 8-bit 4:1 MUX. The select
-line of MUX is a counter of 2-bit (count from 00 to 11). The input of this mux are
-the Present node address, Present node address + 1, Present node address +
-2.
+- Post-Order Traversal has been implemented using a custom built stack of 16 8-bit registers which is the maximum tree size. 
+- For every node visited first the right and left children addresses in order, are pushed into the stack if not 255(NULL) and then the current node address is pushed in. 
+- If a leaf node is reached then the stack is popped and the address at the top is fed into the ROM, the corresponding node data is then processed using combinational logic. 
+- For the depth calculation an additonal stack of 16 4-bit registers are used, which pushes in the depth of the current node while going down the tree using a counter. 
+- For mulitplying 2 8-bit numbers tpc*depth a custom binary mulitplier has been implemented too. 
+<br>
 
-We also created a 8-bit 8:1 mix whose input are connected to the output of 8 D-
-FF connected in series and which store the left and right child node address of
-the current node. And the output of this mux is connected to the input of 8-bit 4:1
-mux.
-
-So, what is happening? When our clock start, the counter will we at the 00 and it
-will give the data of the present node, which is stored in separate D-FlipFlop
-after some processing. When our counter increases and go to 10, ROM will give
-address of left node which is store in one of the 8 FF connected to 8-bit 8:1 mux
-and similarly when counter reaches to 10 the right child node address got
-stored.
-
-So, in this way we store all the address of our nodes and process them one by
-one by sending them to 8-bit 4:1 mux.
-We add one more 8-bit 8:1 mux which will store the value of tpc*distance of
-each node.
-
-The data which come out of ROM every time when our counter is at 00 is the
-price of petrol and we just have to add the value of tpc*distance into it, which we
-do by simple adder and then we compare this value (using comparator) with the
-previous data if this is smaller the previous one, we will replace it otherwise do
-nothing and whenever we replace data we also store it address in a register
-which will become our final address after all nodes are processed.
-
-Now, we have our required result, we just have to show it on 7 segment display.
-For 7 segment display we will use **Shift Add 3 method**. You can read about it [here](https://github.com/ujjawalece/Implementation-of-Linked-List-and-Binary-Tree-using-Digital-Circuit/blob/main/Binary2BCD.pdf).
+To display the final answer on a seven segment display the same circuit is used as in the linked-list part to convert 8-bit binary to 12-bit BCD.  
 ### Solution-
 You can find complete proteus file [here](https://github.com/san2130/Digisim21/blob/main/Round221clean.DSN).
 ### Working-

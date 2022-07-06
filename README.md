@@ -50,7 +50,8 @@ Here in this circuit instead of combinational logic, we used an RTL design techn
 <img src="https://github.com/san2130/Digisim21/blob/main/LinkedList.png" width="80%"/></p>
 <br>
 
-### Working  
+<h2 align="center">Working</h2>
+
 You can see the working video of our circuit [here](https://drive.google.com/file/d/19G4LibBoyWzlmvntwxMMYAmuyDMrrppg/view?usp=sharing).
 The binary file used here is [PS1.bin](https://github.com/san2130/Digisim21/blob/main/PS1.bin) and the clock frequency is 5 Hz.
 
@@ -89,6 +90,7 @@ To display the final answer on a seven segment display the same circuit is used 
 <img src="https://github.com/san2130/Digisim21/blob/main/BinaryTree.png" width="80%"/></p>
 <br>
 
-### Working
+<h2 align="center">Working</h2>
+
 You can see the working video of our circuit [here](https://drive.google.com/file/d/1_hUymDWVhLnb5ABah0CEXrlf9oJ-LaMT/view?usp=sharing).
 The binary file used here is [PS2.bin](https://github.com/san2130/Digisim21/blob/main/PS2.bin) and the clock frequency is 5 Hz.

@@ -1,5 +1,4 @@
 <h1 align="center">Traversing Linked-List and Binary-Tree using Digital Circuit</h1>
-<br>
 
 ## Digital Circuit for Linked List 
 
